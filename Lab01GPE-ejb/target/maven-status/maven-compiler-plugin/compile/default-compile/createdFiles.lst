@@ -1,0 +1,9 @@
+com\udea\modelo\SubunidadAcademica.class
+com\udea\ejb\ProgramaAcademicoManagerLocal.class
+com\udea\modelo\ProgramaAcademico_.class
+com\udea\modelo\SubunidadAcademica_.class
+com\udea\ejb\SubunidadAcademicaManagerLocal.class
+com\udea\NewSessionBean.class
+com\udea\ejb\ProgramaAcademicoManager.class
+com\udea\modelo\ProgramaAcademico.class
+com\udea\ejb\SubunidadAcademicaManager.class

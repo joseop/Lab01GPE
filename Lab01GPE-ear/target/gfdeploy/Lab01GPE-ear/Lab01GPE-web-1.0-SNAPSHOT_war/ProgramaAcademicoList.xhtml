@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Programas Academicos</title>
+    </h:head>
+    <h:body>
+        <f:view>
+
+
+            <h:form>
+                <p:dataTable value="#{programaAcademicoMBean.programasAcademicos}" var="item"
+                             >
+                    <p:column headerText="Id Programa Academica"
+                              sortBy="#{item.idProgramaAcademico}"
+                              filterBy="#{item.idProgramaAcademico}"
+                              filterMatchMode="contains">
+                        <h:commandLink
+                            action="#{programaAcademicoMBean.showDetails(item)}"
+                            value="#{item.idProgramaAcademico}"
+                            />
+                       
+                    </p:column>
+                    <p:column >
+                        
+                        <f:facet name="header">
+                            <h:outputText value="Id Subunidad Academica"/>
+                        </f:facet>
+                        <h:outputText value="#{item.idSubAca}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Nombre"/>
+                        </f:facet>
+                        <h:outputText value="#{item.nombre}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Codigo Icfes"/>
+                        </f:facet>
+                        <h:outputText value="#{item.codigoIcfes}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Modalidad"/>
+                        </f:facet>
+                        <h:outputText value="#{item.modalidad}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Encargado del Programa"/>
+                        </f:facet>
+                        <h:outputText value="#{item.encargadoPrograma}"/>
+                    </p:column>
+                    <p:column>
+                        <f:facet name="header">
+                            <h:outputText value="Descripcion"/>
+                        </f:facet>
+                        <h:outputText value="#{item.descripcion}"/>
+                    </p:column>
+                   
+                </p:dataTable>
+            </h:form>
+        </f:view>
+
+
+
+    </h:body>
+</html>
+
